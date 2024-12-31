@@ -17,13 +17,13 @@ async function greet() {
 
     <div class="row">
       <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo vite" alt="Vite logo" />
+        <img src="/Fontura.png" class="logo vite" alt="Vite logo" />
       </a>
       <a href="https://tauri.app" target="_blank">
-        <img src="/tauri.svg" class="logo tauri" alt="Tauri logo" />
+        <img src="/Fontura.png" class="logo tauri" alt="Tauri logo" />
       </a>
       <a href="https://vuejs.org/" target="_blank">
-        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+        <img src="/Fontura.png" class="logo vue" alt="Vue logo" />
       </a>
     </div>
     <p>Click on the Tauri, Vite, and Vue logos to learn more.</p>
@@ -139,8 +139,8 @@ button {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    color: #f6f6f6;
-    background-color: #2f2f2f;
+    color: #111111;
+    background-color: #e5e5e5;
   }
 
   a:hover {
