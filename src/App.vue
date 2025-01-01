@@ -8,9 +8,22 @@
     const name = ref("");
 
     async function greet() {
-        // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
         greetMsg.value = await invoke("greet", { name: name.value });
     }
+
+    // Titlebar functionality //
+    onMounted(() => {
+        const appWindow = getCurrentWindow();
+
+        // Event listeners for minimize button //
+        document.getElementById("titlebar-minimize")?.addEventListener("click", () => appWindow.minimize());
+
+        // Event listeners for maximize button //
+        document.getElementById("titlebar-maximize")?.addEventListener("click", () => appWindow.maximize());
+
+        // Event listeners for close button //
+        document.getElementById("titlebar-close")?.addEventListener("click", () => appWindow.close());
+    });
 </script>
 
 <template>
