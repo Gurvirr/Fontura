@@ -1,6 +1,8 @@
 <script setup lang="ts">
     import { ref } from "vue";
+    import { onMounted } from "vue";
     import { invoke } from "@tauri-apps/api/core";
+    import { getCurrentWindow } from "@tauri-apps/api/window";
 
     const greetMsg = ref("");
     const name = ref("");
