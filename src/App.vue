@@ -70,6 +70,33 @@
 </template>
 
 <style scoped>
+    /* Titlebar styling */
+    .titlebar {
+        height: 30px;
+        background: #329ea3;
+        user-select: none;
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .titlebar-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .titlebar-button:hover {
+        background: #5bbec3;
+    }
+
     .logo.vite:hover {
         filter: drop-shadow(0 0 2em #747bff);
     }
