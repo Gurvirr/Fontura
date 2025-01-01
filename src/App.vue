@@ -19,7 +19,7 @@
         document.getElementById("titlebar-minimize")?.addEventListener("click", () => appWindow.minimize());
 
         // Event listeners for maximize button //
-        document.getElementById("titlebar-maximize")?.addEventListener("click", () => appWindow.maximize());
+        document.getElementById("titlebar-maximize")?.addEventListener("click", () => appWindow.toggleMaximize());
 
         // Event listeners for close button //
         document.getElementById("titlebar-close")?.addEventListener("click", () => appWindow.close());
