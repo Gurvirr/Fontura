@@ -14,12 +14,19 @@
 <template>
     <!-- Titlebar structrue -->
     <div data-tauri-drag-region class="titlebar">
+        <!-- Minimize button -->
         <div class="titlebar-button" id="titlebar-minimize">
             <img src="https://api.iconify.design/mdi:window-minimize.svg" alt="Minimize"/>
         </div>
 
+        <!-- maximize button -->
         <div class="titlebar-button" id="titlebar-maximize">
             <img src="https://api.iconify.design/mdi:window-maximize.svg" alt="Maximize"/>
+        </div>
+
+        <!-- Close button -->
+        <div class="titlebar-button" id="titlebar-close">
+            <img src="https://api.iconify.design/mdi:close.svg" alt="Close" />
         </div>
     </div>
 
