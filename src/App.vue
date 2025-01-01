@@ -31,17 +31,17 @@
     <div data-tauri-drag-region class="titlebar">
         <!-- Minimize button -->
         <div class="titlebar-button" id="titlebar-minimize">
-            <img src="https://api.iconify.design/mdi:window-minimize.svg" alt="Minimize"/>
+            <img src="/public/minimize.svg" alt="Minimize" class="icon"/>
         </div>
 
         <!-- maximize button -->
         <div class="titlebar-button" id="titlebar-maximize">
-            <img src="https://api.iconify.design/mdi:window-maximize.svg" alt="Maximize"/>
+            <img src="/public/maximize.svg" alt="Maximize" class="icon"/>
         </div>
 
         <!-- Close button -->
         <div class="titlebar-button" id="titlebar-close">
-            <img src="https://api.iconify.design/mdi:close.svg" alt="Close" />
+            <img src="/public/close.svg" alt="Close" class="icon"/>
         </div>
     </div>
 
@@ -72,8 +72,8 @@
 <style scoped>
     /* Titlebar styling */
     .titlebar {
-        height: 30px;
-        background: #329ea3;
+        height: 36px;
+        background: #e5e5e5;
         user-select: none;
         display: flex;
         justify-content: flex-end;
@@ -87,8 +87,8 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        width: 30px;
-        height: 30px;
+        width: 36px;
+        height: 36px;
         user-select: none;
         -webkit-user-select: none;
     }
