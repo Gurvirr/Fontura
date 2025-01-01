@@ -17,6 +17,10 @@
         <div class="titlebar-button" id="titlebar-minimize">
             <img src="https://api.iconify.design/mdi:window-minimize.svg" alt="Minimize"/>
         </div>
+
+        <div class="titlebar-button" id="titlebar-maximize">
+            <img src="https://api.iconify.design/mdi:window-maximize.svg" alt="Maximize"/>
+        </div>
     </div>
 
     <main class="container">
