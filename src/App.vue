@@ -12,6 +12,11 @@
 </script>
 
 <template>
+    <!-- Titlebar structrue -->
+    <div data-tauri-drag-region class="titlebar">
+
+    </div>
+
     <main class="container">
         <h1>Welcome to Tauri + Vue</h1>
 
