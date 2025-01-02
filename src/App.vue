@@ -29,6 +29,10 @@
 <template>
     <!-- Titlebar structure -->
     <div data-tauri-drag-region class="titlebar">
+        <div class="titlebar-logo">
+            <img src="./assets/Fontura-Title.svg" alt="Fontura" shape-rendering="crispEdges"/>
+        </div>
+
         <!-- Minimize button -->
         <div class="titlebar-button" id="titlebar-minimize">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none" shape-rendering="crispEdges">
@@ -91,6 +95,18 @@
         top: 0;
         left: 0;
         right: 0;
+        align-items: center;
+    }
+
+    .titlebar-logo {
+        position: absolute;
+        left: 2px; /* Adjust the distance from the left edge */
+        top: 2px; /* Center vertically */
+    }
+
+    .titlebar-logo img {
+        height: 50px; /* Adjust the logo size */
+        width: auto;
     }
 
     .titlebar-button {
