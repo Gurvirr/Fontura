@@ -31,14 +31,14 @@
     <div data-tauri-drag-region class="titlebar">
         <!-- Minimize button -->
         <div class="titlebar-button" id="titlebar-minimize">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none" shape-rendering="crispEdges">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none" shape-rendering="crispEdges">
                 <rect x="12.25" y="18.25" width="11.5" height="0.5" fill="#332922" stroke="#332922" stroke-width="0.5"/>
             </svg>
         </div>
 
         <!-- Maximize button -->
         <div class="titlebar-button" id="titlebar-maximize">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
                 <rect x="12.5" y="14.5" width="9" height="9" stroke="#332922"/>
                 <rect x="24" y="12" width="1" height="9" transform="rotate(90 24 12)" fill="#332922"/>
                 <rect x="15" y="14" width="1" height="2" transform="rotate(-180 15 14)" fill="#332922"/>
@@ -49,12 +49,8 @@
 
         <!-- Close button -->
         <div class="titlebar-button" id="titlebar-close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <path d="M18 18L12 12" stroke="#332922"/>
-                <path d="M18 18L24 12" stroke="#332922"/>
-                <path d="M18 18L24 24" stroke="#332922"/>
-                <path d="M18 18L12 24" stroke="#332922"/>
-                <rect x="17.5" y="17.5" width="1" height="1" fill="#332922" stroke="#332922"/>
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <path d="M12 12L24 24M24 12L12 24" stroke="#332922"/>
             </svg>
         </div>
     </div>
@@ -107,10 +103,22 @@
         -webkit-user-select: none;
     }
 
-    .titlebar-button:hover {
+    /* .titlebar-button:hover {
         background: #5bbec3;
+    } */
+
+    /* Titlebar icon animation */
+    .titlebar-button .icon {
+        width: 36px;
+        height: 36px;
+        display: block;
+        transition: transform 0.125s ease-in-out;
     }
 
+    .titlebar-button:hover .icon {
+        transform: scale(1.5);
+    }
+    
     .logo.vite:hover {
         filter: drop-shadow(0 0 2em #747bff);
     }
