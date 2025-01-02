@@ -119,10 +119,6 @@
         -webkit-user-select: none;
     }
 
-    /* .titlebar-button:hover {
-        background: #5bbec3;
-    } */
-
     /* Titlebar icon animation */
     .titlebar-button .icon {
         width: 36px;
