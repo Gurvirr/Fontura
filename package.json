@@ -13,6 +13,7 @@
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
     "font-list": "^1.5.1",
+    "get-system-fonts": "^2.0.2",
     "vue": "^3.5.13"
   },
   "devDependencies": {
