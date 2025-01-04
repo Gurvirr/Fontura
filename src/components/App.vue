@@ -30,7 +30,7 @@
     <!-- Titlebar structure -->
     <div data-tauri-drag-region class="titlebar">
         <div class="titlebar-logo">
-            <img src="./assets/Fontura-Title.svg" alt="Fontura" shape-rendering="crispEdges"/>
+            <img src="/src/assets/Fontura-Title.svg" alt="Fontura" shape-rendering="crispEdges"/>
         </div>
 
         <!-- Minimize button -->
