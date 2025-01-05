@@ -79,7 +79,7 @@
 <style scoped>
     /* Titlebar styling */
     .titlebar {
-        height: 36px;
+        height: 44px;
         background: #181818;
         user-select: none;
         display: flex;
@@ -106,16 +106,16 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        width: 36px;
-        height: 36px;
+        width: 44px;
+        height: 44px;
         user-select: none;
         -webkit-user-select: none;
     }
 
     /* Titlebar icon animation */
     .titlebar-button .icon {
-        width: 36px;
-        height: 36px;
+        width: 44px;
+        height: 44px;
         display: block;
         transition: transform 0.125s ease-in-out;
     }
