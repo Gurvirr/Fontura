@@ -151,7 +151,7 @@
         display: flex;
         justify-content: center;
     }
-
+    
     /* Styling for the search box */
     .search-box {
         width: 100%;
@@ -167,6 +167,13 @@
         text-align: center; /* Center the input text */
         outline: none; /* Remove the default outline */
         box-sizing: border-box; /* Include padding in the total height */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    }
+
+    /* Hover effect for the search box container */
+    .search-box-container:hover .search-box {
+        background-color: #282828; /* Change background color */
+        color: #d8d8d8; /* Keep text color the same */
     }
 
     /* Styling for the left search icon */
@@ -175,6 +182,7 @@
         top: 50%;
         left: 7px;
         transform: translateY(-50%);
+        transition: stroke 0.3s; /* Smooth transition */
     }
 
     /* Styling for the right search icon (close icon) */
@@ -183,16 +191,28 @@
         top: 50%;
         right: 7px;
         transform: translateY(-50%);
+        transition: stroke 0.3s; /* Smooth transition */
+    }
+
+    /* Hover effect for the search icons */
+    .search-box-container:hover .search-icon-left,
+    .search-box-container:hover .search-icon-right {
+        stroke: #d8d8d8; /* Change icon color */
     }
 
     /* Styling for the placeholder text */
     .search-box::placeholder {
-        color: #888888; /* Change the placeholder text color */
+        color: #888888; /* Initial placeholder text color */
         text-align: center; /* Center the placeholder text */
         font-family: 'Brockmann', sans-serif; /* Apply the Brockmann font to placeholder */
         font-size: 14px; /* Ensure the font size matches the input text */
+        transition: color 0.3s; /* Smooth transition */
     }
 
+    /* Hover effect for the placeholder text */
+    .search-box-container:hover .search-box::placeholder {
+        color: #d8d8d8; /* Change placeholder text color */
+    }
 
     /* Main content rectangle container */
     .main-content {
