@@ -111,6 +111,8 @@
 </template>
 
 <style scoped>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
+
     /* Titlebar styling */
     .titlebar {
         height: 44px;
@@ -179,7 +181,7 @@
         padding-right: 30px;
         border: none;
         border-radius: 5px;
-        font-family: 'Brockmann', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 14px;
         text-align: center;
         outline: none;
@@ -229,7 +231,7 @@
     .search-box::placeholder {
         color: #888888;
         text-align: center;
-        font-family: 'Brockmann', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 14px;
         transition: color 0.3s;
     }
@@ -267,18 +269,14 @@
         margin-top: 10px;
         margin-left: 6px;
         font-size: 40px;
-        text-shadow: 
-            0.5px 0.5px 0 #181818, 
-            -0.5px -0.5px 0 #181818,  
-            0.5px -0.5px 0 #181818, 
-            -0.5px 0.5px 0 #181818;
+        font-weight: 700;
     }
 </style>
 
 
 <style>
     :root {
-        font-family: "Brockmann", sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 16px;
         line-height: 24px;
 
