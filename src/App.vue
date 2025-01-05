@@ -67,7 +67,7 @@
 
     <!-- Main content rectangle container -->
     <div class="main-content">
-        <h1>Available Fonts</h1>
+        <h1>Font list</h1>
         <ul>
             <li v-for="font in fonts" :key="font" :style="{ fontFamily: font }">
                 {{ font }}
@@ -137,15 +137,22 @@
         height: auto;
         border-top-left-radius: 50px;
     }
+        
+    .main-content h1 {
+        font-size: 35px;
+        text-shadow: 
+            0.5px 0.5px 0 #181818, 
+            -0.5px -0.5px 0 #181818,  
+            0.5px -0.5px 0 #181818, 
+            -0.5px 0.5px 0 #181818;
+    }
 </style>
-
 
 <style>
     :root {
-        font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+        font-family: "Brockmann", sans-serif;
         font-size: 16px;
         line-height: 24px;
-        font-weight: 400;
 
         color: #0f0f0f;
         background-color: #f6f6f6;
