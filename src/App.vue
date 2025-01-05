@@ -65,15 +65,21 @@
         </div>
     </div>
 
-    <!-- Search box container with SVG icon -->
+    <!-- Search box container with SVG icons -->
     <div class="search-box-container">
         <!-- Search box -->
         <input type="text" id="search-box" placeholder="Search fonts..." class="search-box"/>
         
         <!-- Search icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="search-icon" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="search-icon-left">
             <circle cx="3.82653" cy="3.82653" r="3.32653" stroke="#888888"/>
-            <path d="M6.42859 6.42859L10 10" stroke="#A8A8A8"/>
+            <path d="M6.42859 6.42859L10 10" stroke="#888888"/>
+        </svg>
+
+        <!-- Clear icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="search-icon-right">
+            <path d="M7.5 2.5L2.5 7.5" stroke="#888888" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M2.5 2.5L7.5 7.5" stroke="#888888" stroke-linecap="square" stroke-linejoin="round"/>
         </svg>
     </div>
 
@@ -142,6 +148,8 @@
         width: 315px;
         height: 24px;
         margin: 10px auto; /* Center the container horizontally */
+        display: flex;
+        justify-content: center;
     }
 
     /* Styling for the search box */
@@ -151,19 +159,30 @@
         background-color: #1f1f1f;
         color: #d8d8d8;
         padding-left: 30px; /* Space for the icon */
+        padding-right: 30px; /* Space for the icon */
         border: none;
         border-radius: 5px;
         font-family: 'Brockmann', sans-serif;
         font-size: 14px;
         text-align: center; /* Center the input text */
         outline: none; /* Remove the default outline */
+        box-sizing: border-box; /* Include padding in the total height */
     }
 
-    /* Styling for the search icon */
-    .search-icon {
+    /* Styling for the left search icon */
+    .search-icon-left {
         position: absolute;
-        top: 7px;
+        top: 50%;
         left: 7px;
+        transform: translateY(-50%);
+    }
+
+    /* Styling for the right search icon (close icon) */
+    .search-icon-right {
+        position: absolute;
+        top: 50%;
+        right: 7px;
+        transform: translateY(-50%);
     }
 
     /* Styling for the placeholder text */
