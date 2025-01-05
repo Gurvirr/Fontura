@@ -65,6 +65,9 @@
         </div>
     </div>
 
+    <!-- Search box -->
+    <input type="text" id="search-box" placeholder="Search..." class="search-box"/>
+
     <!-- Main content rectangle container -->
     <div class="main-content">
         <h1>Font list</h1>
@@ -122,6 +125,33 @@
 
     .titlebar-button:hover .icon {
         transform: scale(1.5);
+    }
+    /* Search box styling */
+    .search-box {
+        width: 315px;
+        height: 24px;
+        background-color: #1f1f1f;
+        color: #f8f8f8;
+        border: none;
+        border-radius: 5px;
+        padding: 0 10px;
+        display: block;
+        font-size: 14px;
+        text-align: center;
+        outline: none;
+        box-sizing: border-box;
+        position: fixed; /* Fixed to the top of the window */
+        top: 10px; /* 10px margin from the top */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+    }
+
+    /* Styling for the placeholder text */
+    .search-box::placeholder {
+        color: #a8a8a8; /* Change the placeholder text color */
+        text-align: center; /* Center the placeholder text */
+        font-family: 'Brockmann', sans-serif; /* Apply the Brockmann font to placeholder */
+        font-size: 14px; /* Ensure the font size matches the input text */
     }
 
     /* Main content rectangle container */
