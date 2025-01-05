@@ -76,7 +76,7 @@
     <!-- Search box container with SVG icons -->
     <div class="search-box-container">
         <!-- Search box -->
-        <input type="text" id="search-box" v-model="searchQuery" placeholder="Search fonts..." class="search-box"/>
+        <input type="text" id="search-box" v-model="searchQuery" placeholder="Search fonts..." class="search-box" autocomplete="off"/>
         
         <!-- Search icon -->
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="search-icon">
@@ -265,7 +265,7 @@
     .main-content h1 {
         margin-top: 10px;
         margin-left: 6px;
-        font-size: 35px;
+        font-size: 40px;
         text-shadow: 
             0.5px 0.5px 0 #181818, 
             -0.5px -0.5px 0 #181818,  
