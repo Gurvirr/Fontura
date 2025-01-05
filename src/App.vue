@@ -1,9 +1,13 @@
 <script setup lang="ts">
     import { onMounted } from "vue";
+    import { ref } from "vue";
     import { getCurrentWindow } from "@tauri-apps/api/window";
 
-    // Titlebar functionality //
+    // Font list state //
+    const fonts = ref<string[]>([]);
+    
     onMounted(() => {
+        // Titlebar functionality //
         const appWindow = getCurrentWindow();
 
         // Event listeners for minimize button //
@@ -14,6 +18,17 @@
 
         // Event listeners for close button //
         document.getElementById("titlebar-close")?.addEventListener("click", () => appWindow.close());
+
+
+        // Fetch the fonts.json file
+        fetch("/fonts.json")
+            .then(response => response.json())
+            .then(data => {
+                fonts.value = data.fonts;
+            })
+            .catch(error => {
+                console.error('Error reading fonts.json:', error);
+            });
     });
 </script>
 
