@@ -65,7 +65,14 @@
         </div>
     </div>
 
+    <!-- System font list -->
     <main class="container">
+        <h1>Fonts List</h1>
+        <ul>
+            <li v-for="(font, index) in fonts" :key="index" :style="{ fontFamily: font }">
+                {{ font }}
+            </li>
+        </ul>
     </main>
 </template>
 
