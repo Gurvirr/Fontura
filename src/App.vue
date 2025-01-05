@@ -65,8 +65,17 @@
         </div>
     </div>
 
-    <!-- Search box -->
-    <input type="text" id="search-box" placeholder="Search..." class="search-box"/>
+    <!-- Search box container with SVG icon -->
+    <div class="search-box-container">
+        <!-- Search box -->
+        <input type="text" id="search-box" placeholder="Search fonts..." class="search-box"/>
+        
+        <!-- Search icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="search-icon" >
+            <circle cx="3.82653" cy="3.82653" r="3.32653" stroke="#888888"/>
+            <path d="M6.42859 6.42859L10 10" stroke="#A8A8A8"/>
+        </svg>
+    </div>
 
     <!-- Main content rectangle container -->
     <div class="main-content">
@@ -126,33 +135,45 @@
     .titlebar-button:hover .icon {
         transform: scale(1.5);
     }
-    /* Search box styling */
-    .search-box {
+
+    /* Container for the search box and icon */
+    .search-box-container {
+        position: relative;
         width: 315px;
         height: 24px;
+        margin: 10px auto; /* Center the container horizontally */
+    }
+
+    /* Styling for the search box */
+    .search-box {
+        width: 100%;
+        height: 100%;
         background-color: #1f1f1f;
-        color: #f8f8f8;
+        color: #d8d8d8;
+        padding-left: 30px; /* Space for the icon */
         border: none;
         border-radius: 5px;
-        padding: 0 10px;
-        display: block;
+        font-family: 'Brockmann', sans-serif;
         font-size: 14px;
-        text-align: center;
-        outline: none;
-        box-sizing: border-box;
-        position: fixed; /* Fixed to the top of the window */
-        top: 10px; /* 10px margin from the top */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Center horizontally */
+        text-align: center; /* Center the input text */
+        outline: none; /* Remove the default outline */
+    }
+
+    /* Styling for the search icon */
+    .search-icon {
+        position: absolute;
+        top: 7px;
+        left: 7px;
     }
 
     /* Styling for the placeholder text */
     .search-box::placeholder {
-        color: #a8a8a8; /* Change the placeholder text color */
+        color: #888888; /* Change the placeholder text color */
         text-align: center; /* Center the placeholder text */
         font-family: 'Brockmann', sans-serif; /* Apply the Brockmann font to placeholder */
         font-size: 14px; /* Ensure the font size matches the input text */
     }
+
 
     /* Main content rectangle container */
     .main-content {
