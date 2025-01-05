@@ -67,8 +67,12 @@
 
     <!-- Main content rectangle container -->
     <div class="main-content">
-        <!-- Add your content here -->
-        <h1>Welcome to the Main Content</h1>
+        <h1>Available Fonts</h1>
+        <ul>
+            <li v-for="font in fonts" :key="font" :style="{ fontFamily: font }">
+                {{ font }}
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -126,9 +130,12 @@
         top: 44px;
         left: 44px;
         right: 0;
-        bottom: 0;
+        color: #181818;
         background-color: #f8f8f8;
         padding: 20px;
+        z-index: -1;
+        height: auto;
+        border-top-left-radius: 15px;
     }
 </style>
 
