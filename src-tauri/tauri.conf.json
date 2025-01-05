@@ -14,7 +14,9 @@
       {
         "title": "Fontura",
         "width": 1000,
+        "minWidth": 600,
         "height": 600,
+        "minHeight": 300,
         "resizable": true,
         "decorations": false,
         "transparent": false
