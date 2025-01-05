@@ -161,11 +161,12 @@
     /* Container for the search box and icons */
     .search-box-container {
         position: relative;
-        width: 315px;
+        width: 45vw;
         height: 24px;
         margin: 10px auto;
         display: flex;
-        justify-content: center
+        justify-content: center;
+        transition: width 0.3s ease;
     }
 
     /* Styling for the search box */
