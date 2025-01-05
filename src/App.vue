@@ -7,7 +7,7 @@
     const fonts = ref<string[]>([]);
     
     // Search box input //
-    const searchBox = ref<HTMLInputElement | null>(null);
+    const searchQuery = ref<string>(""); // Bind the search query to the input field
 
     onMounted(() => {
         // Titlebar functionality //
@@ -34,11 +34,9 @@
             });
     });
 
-    // Function to clear search box text //
-    const clearSearchBox = () => {
-        if (searchBox.value) {
-            searchBox.value.value = "";
-        }
+    // Method to clear the search box
+    const clearSearch = () => {
+        searchQuery.value = ""; // Clear the search query
     };
 </script>
 
@@ -78,7 +76,7 @@
     <!-- Search box container with SVG icons -->
     <div class="search-box-container">
         <!-- Search box -->
-        <input type="text" id="search-box" placeholder="Search fonts..." class="search-box"/>
+        <input type="text" id="search-box" v-model="searchQuery" placeholder="Search fonts..." class="search-box"/>
         
         <!-- Search icon -->
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="search-icon">
@@ -86,13 +84,11 @@
             <path d="M6.42859 6.42859L10 10" stroke="currentColor"/>
         </svg>
 
-
         <!-- Clear icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="clear-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="clear-icon" @click="clearSearch">
             <path d="M7.5 2.5L2.5 7.5" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round"/>
             <path d="M2.5 2.5L7.5 7.5" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round"/>
         </svg>
-
     </div>
 
     <!-- Main content rectangle container -->
@@ -198,7 +194,7 @@
         transition: color 0.3s; /* Smooth transition */
     }
 
-    /* Styling for the right search icon (close icon) */
+    /* Styling for the right search icon (clear icon) */
     .clear-icon {
         position: absolute;
         top: 50%;
@@ -206,6 +202,7 @@
         transform: translateY(-50%);
         color: #888888; /* Default color for the icon */
         transition: color 0.3s; /* Smooth transition */
+        cursor: pointer;
     }
 
     /* Hover effect for the search icons */
