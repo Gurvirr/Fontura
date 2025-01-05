@@ -134,11 +134,15 @@
         background-color: #f8f8f8;
         padding: 20px;
         z-index: -1;
-        height: auto;
+        height: calc(100vh - 44px);
+        overflow-y: auto;
         border-top-left-radius: 50px;
+        box-sizing: border-box;
     }
         
     .main-content h1 {
+        margin-top: 10px;
+        margin-left: 6px;
         font-size: 35px;
         text-shadow: 
             0.5px 0.5px 0 #181818, 
