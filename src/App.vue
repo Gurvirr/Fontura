@@ -7,7 +7,7 @@
     const fonts = ref<string[]>([]);
     
     // Search box input //
-    const searchQuery = ref<string>(""); // Bind the search query to the input field
+    const searchQuery = ref<string>("");
 
     onMounted(() => {
         // Titlebar functionality //
@@ -34,9 +34,9 @@
             });
     });
 
-    // Method to clear the search box
+    // Function to clear the search box
     const clearSearch = () => {
-        searchQuery.value = ""; // Clear the search query
+        searchQuery.value = "";
     };
 </script>
 
@@ -88,6 +88,14 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="clear-icon" @click="clearSearch">
             <path d="M7.5 2.5L2.5 7.5" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round"/>
             <path d="M2.5 2.5L7.5 7.5" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round"/>
+        </svg>
+
+        <!-- Sort icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="sort-icon">
+            <path d="M0 0H10V1H0V0Z" fill="#currentColor"/>
+            <path d="M0 3H8V4H0V3Z" fill="#currentColor"/>
+            <path d="M0 6H6V7H0V6Z" fill="#currentColor"/>
+            <path d="M0 9H4V10H0V9Z" fill="#currentColor"/>
         </svg>
     </div>
 
@@ -150,14 +158,14 @@
         transform: scale(1.5);
     }
 
-    /* Container for the search box and icon */
+    /* Container for the search box and icons */
     .search-box-container {
         position: relative;
         width: 315px;
         height: 24px;
-        margin: 10px auto; /* Center the container horizontally */
+        margin: 10px auto;
         display: flex;
-        justify-content: center;
+        justify-content: center
     }
 
     /* Styling for the search box */
@@ -166,22 +174,22 @@
         height: 100%;
         background-color: #1f1f1f;
         color: #d8d8d8;
-        padding-left: 30px; /* Space for the icon */
-        padding-right: 30px; /* Space for the icon */
+        padding-left: 30px;
+        padding-right: 30px;
         border: none;
         border-radius: 5px;
         font-family: 'Brockmann', sans-serif;
         font-size: 14px;
-        text-align: center; /* Center the input text */
-        outline: none; /* Remove the default outline */
-        box-sizing: border-box; /* Include padding in the total height */
-        transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        text-align: center;
+        outline: none;
+        box-sizing: border-box;
+        transition: background-color 0.3s, color 0.3s;
     }
 
     /* Hover effect for the search box container */
     .search-box-container:hover .search-box {
-        background-color: #282828; /* Change background color */
-        color: #d8d8d8; /* Keep text color the same */
+        background-color: #282828;
+        color: #d8d8d8;
     }
 
     /* Styling for the left search icon */
@@ -190,8 +198,8 @@
         top: 50%;
         left: 7px;
         transform: translateY(-50%);
-        color: #888888; /* Default color for the icon */
-        transition: color 0.3s; /* Smooth transition */
+        color: #888888;
+        transition: color 0.3s;
     }
 
     /* Styling for the right search icon (clear icon) */
@@ -200,29 +208,42 @@
         top: 50%;
         right: 7px;
         transform: translateY(-50%);
-        color: #888888; /* Default color for the icon */
-        transition: color 0.3s; /* Smooth transition */
+        color: #888888;
+        transition: color 0.3s;
         cursor: pointer;
     }
 
     /* Hover effect for the search icons */
     .search-box-container:hover .search-icon,
     .search-box-container:hover .clear-icon {
-        color: #d8d8d8; /* Change icon color to red */
+        color: #d8d8d8;
     }
 
     /* Hover effect for the placeholder text */
     .search-box-container:hover .search-box::placeholder {
-        color: #d8d8d8; /* Change placeholder text color */
+        color: #d8d8d8;
     }
 
     /* Styling for the placeholder text */
     .search-box::placeholder {
-        color: #888888; /* Initial placeholder text color */
-        text-align: center; /* Center the placeholder text */
-        font-family: 'Brockmann', sans-serif; /* Apply the Brockmann font to placeholder */
-        font-size: 14px; /* Ensure the font size matches the input text */
-        transition: color 0.3s; /* Smooth transition */
+        color: #888888;
+        text-align: center;
+        font-family: 'Brockmann', sans-serif;
+        font-size: 14px;
+        transition: color 0.3s;
+    }
+    /* Styling for the sort icon */
+    .sort-icon {
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        fill: #888888;
+        transition: fill 0.3s;
+    }
+
+    .sort-icon:hover {
+        fill: #d8d8d8;
     }
 
     /* Main content rectangle container */
@@ -252,6 +273,7 @@
             -0.5px 0.5px 0 #181818;
     }
 </style>
+
 
 <style>
     :root {
