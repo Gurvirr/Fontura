@@ -71,13 +71,13 @@
         <input type="text" id="search-box" placeholder="Search fonts..." class="search-box"/>
         
         <!-- Search icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="search-icon-left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="search-icon">
             <circle cx="3.82653" cy="3.82653" r="3.32653" stroke="#888888"/>
             <path d="M6.42859 6.42859L10 10" stroke="#888888"/>
         </svg>
 
         <!-- Clear icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="search-icon-right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="clear-icon">
             <path d="M7.5 2.5L2.5 7.5" stroke="#888888" stroke-linecap="square" stroke-linejoin="round"/>
             <path d="M2.5 2.5L7.5 7.5" stroke="#888888" stroke-linecap="square" stroke-linejoin="round"/>
         </svg>
@@ -177,7 +177,7 @@
     }
 
     /* Styling for the left search icon */
-    .search-icon-left {
+    .search-icon {
         position: absolute;
         top: 50%;
         left: 7px;
@@ -186,7 +186,7 @@
     }
 
     /* Styling for the right search icon (close icon) */
-    .search-icon-right {
+    .clear-icon {
         position: absolute;
         top: 50%;
         right: 7px;
@@ -195,8 +195,8 @@
     }
 
     /* Hover effect for the search icons */
-    .search-box-container:hover .search-icon-left,
-    .search-box-container:hover .search-icon-right {
+    .search-box-container:hover .search-icon,
+    .search-box-container:hover .clear-icon {
         stroke: #d8d8d8; /* Change icon color */
     }
 
