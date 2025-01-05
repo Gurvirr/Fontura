@@ -6,6 +6,9 @@
     // Font list state //
     const fonts = ref<string[]>([]);
     
+    // Search box input //
+    const searchBox = ref<HTMLInputElement | null>(null);
+
     onMounted(() => {
         // Titlebar functionality //
         const appWindow = getCurrentWindow();
@@ -30,6 +33,13 @@
                 console.error('Error reading fonts.json:', error);
             });
     });
+
+    // Function to clear search box text //
+    const clearSearchBox = () => {
+        if (searchBox.value) {
+            searchBox.value.value = "";
+        }
+    };
 </script>
 
 <template>
