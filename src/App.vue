@@ -36,31 +36,31 @@
     <!-- Titlebar structure -->
     <div data-tauri-drag-region class="titlebar">
         <div class="titlebar-logo">
-            <img src="/src/assets/Fontura-Title.svg" alt="Fontura" shape-rendering="crispEdges"/>
+            <img src="/src/assets/Fontura-F.svg" alt="Fontura" shape-rendering="crispEdges"/>
         </div>
 
         <!-- Minimize button -->
         <div class="titlebar-button" id="titlebar-minimize">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none" shape-rendering="crispEdges">
-                <rect x="12.25" y="18.25" width="11.5" height="0.5" fill="#332922" stroke="#332922" stroke-width="0.5"/>
+                <rect x="12.25" y="18.25" width="11.5" height="0.5" fill="#f8f8f8" stroke="#f8f8f8" stroke-width="0.5"/>
             </svg>
         </div>
 
         <!-- Maximize button -->
         <div class="titlebar-button" id="titlebar-maximize">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <rect x="12.5" y="14.5" width="9" height="9" stroke="#332922"/>
-                <rect x="24" y="12" width="1" height="9" transform="rotate(90 24 12)" fill="#332922"/>
-                <rect x="15" y="14" width="1" height="2" transform="rotate(-180 15 14)" fill="#332922"/>
-                <rect x="22" y="22" width="1" height="2" transform="rotate(-90 22 22)" fill="#332922"/>
-                <rect x="24" y="21" width="1" height="9" transform="rotate(-180 24 21)" fill="#332922"/>
+                <rect x="12.5" y="14.5" width="9" height="9" stroke="#f8f8f8"/>
+                <rect x="24" y="12" width="1" height="9" transform="rotate(90 24 12)" fill="#f8f8f8"/>
+                <rect x="15" y="14" width="1" height="2" transform="rotate(-180 15 14)" fill="#f8f8f8"/>
+                <rect x="22" y="22" width="1" height="2" transform="rotate(-90 22 22)" fill="#f8f8f8"/>
+                <rect x="24" y="21" width="1" height="9" transform="rotate(-180 24 21)" fill="#f8f8f8"/>
             </svg>
         </div>
 
         <!-- Close button -->
         <div class="titlebar-button" id="titlebar-close">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <path d="M12 12L24 24M24 12L12 24" stroke="#332922"/>
+                <path d="M12 12L24 24M24 12L12 24" stroke="#f8f8f8"/>
             </svg>
         </div>
     </div>
@@ -80,7 +80,7 @@
     /* Titlebar styling */
     .titlebar {
         height: 36px;
-        background: #e5e5e5;
+        background: #181818;
         user-select: none;
         display: flex;
         justify-content: flex-end;
@@ -93,8 +93,8 @@
 
     .titlebar-logo {
         position: absolute;
-        left: 2px;
-        top: 2px;
+        left: 10px;
+        top: 10px;
     }
 
     .titlebar-logo img {
@@ -160,8 +160,8 @@
 
     @media (prefers-color-scheme: dark) {
         :root {
-            color: #111111;
-            background-color: #e5e5e5;
+            color: #f8f8f8;
+            background-color: #181818;
         }
     }
 </style>
