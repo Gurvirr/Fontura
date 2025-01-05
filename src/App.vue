@@ -93,12 +93,12 @@
 
     .titlebar-logo {
         position: absolute;
-        left: 2px; /* Adjust the distance from the left edge */
-        top: 2px; /* Center vertically */
+        left: 2px;
+        top: 2px;
     }
 
     .titlebar-logo img {
-        height: 50px; /* Adjust the logo size */
+        height: 50px;
         width: auto;
     }
 
@@ -122,6 +122,22 @@
 
     .titlebar-button:hover .icon {
         transform: scale(1.5);
+    }
+
+    /* Font list styling */
+    .container {
+        margin-top: 60px;
+        padding: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin: 5px 0;
+        font-size: 16px;
     }
 </style>
 
