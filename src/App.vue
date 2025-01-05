@@ -135,7 +135,7 @@
         padding: 20px;
         z-index: -1;
         height: auto;
-        border-top-left-radius: 15px;
+        border-top-left-radius: 50px;
     }
 </style>
 
