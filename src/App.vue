@@ -72,15 +72,17 @@
         
         <!-- Search icon -->
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="search-icon">
-            <circle cx="3.82653" cy="3.82653" r="3.32653" stroke="#888888"/>
-            <path d="M6.42859 6.42859L10 10" stroke="#888888"/>
+            <circle cx="3.82653" cy="3.82653" r="3.32653" stroke="currentColor"/>
+            <path d="M6.42859 6.42859L10 10" stroke="currentColor"/>
         </svg>
+
 
         <!-- Clear icon -->
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" fill="none" class="clear-icon">
-            <path d="M7.5 2.5L2.5 7.5" stroke="#888888" stroke-linecap="square" stroke-linejoin="round"/>
-            <path d="M2.5 2.5L7.5 7.5" stroke="#888888" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M7.5 2.5L2.5 7.5" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M2.5 2.5L7.5 7.5" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round"/>
         </svg>
+
     </div>
 
     <!-- Main content rectangle container -->
@@ -151,7 +153,7 @@
         display: flex;
         justify-content: center;
     }
-    
+
     /* Styling for the search box */
     .search-box {
         width: 100%;
@@ -182,7 +184,8 @@
         top: 50%;
         left: 7px;
         transform: translateY(-50%);
-        transition: stroke 0.3s; /* Smooth transition */
+        color: #888888; /* Default color for the icon */
+        transition: color 0.3s; /* Smooth transition */
     }
 
     /* Styling for the right search icon (close icon) */
@@ -191,13 +194,19 @@
         top: 50%;
         right: 7px;
         transform: translateY(-50%);
-        transition: stroke 0.3s; /* Smooth transition */
+        color: #888888; /* Default color for the icon */
+        transition: color 0.3s; /* Smooth transition */
     }
 
     /* Hover effect for the search icons */
     .search-box-container:hover .search-icon,
     .search-box-container:hover .clear-icon {
-        stroke: #d8d8d8; /* Change icon color */
+        color: #d8d8d8; /* Change icon color to red */
+    }
+
+    /* Hover effect for the placeholder text */
+    .search-box-container:hover .search-box::placeholder {
+        color: #d8d8d8; /* Change placeholder text color */
     }
 
     /* Styling for the placeholder text */
@@ -207,11 +216,6 @@
         font-family: 'Brockmann', sans-serif; /* Apply the Brockmann font to placeholder */
         font-size: 14px; /* Ensure the font size matches the input text */
         transition: color 0.3s; /* Smooth transition */
-    }
-
-    /* Hover effect for the placeholder text */
-    .search-box-container:hover .search-box::placeholder {
-        color: #d8d8d8; /* Change placeholder text color */
     }
 
     /* Main content rectangle container */
@@ -229,7 +233,7 @@
         border-top-left-radius: 50px;
         box-sizing: border-box;
     }
-        
+
     .main-content h1 {
         margin-top: 10px;
         margin-left: 6px;
