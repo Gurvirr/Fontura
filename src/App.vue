@@ -65,15 +65,11 @@
         </div>
     </div>
 
-    <!-- System font list -->
-    <main class="container">
-        <h1>Fonts List</h1>
-        <ul>
-            <li v-for="(font, index) in fonts" :key="index" :style="{ fontFamily: font }">
-                {{ font }}
-            </li>
-        </ul>
-    </main>
+    <!-- Main content rectangle container -->
+    <div class="main-content">
+        <!-- Add your content here -->
+        <h1>Welcome to the Main Content</h1>
+    </div>
 </template>
 
 <style scoped>
@@ -124,22 +120,18 @@
         transform: scale(1.5);
     }
 
-    /* Font list styling */
-    .container {
-        margin-top: 60px;
+    /* Main content rectangle container */
+    .main-content {
+        position: absolute;
+        top: 44px;
+        left: 44px;
+        right: 0;
+        bottom: 0;
+        background-color: #f8f8f8;
         padding: 20px;
     }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        margin: 5px 0;
-        font-size: 16px;
-    }
 </style>
+
 
 <style>
     :root {
