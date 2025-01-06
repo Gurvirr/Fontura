@@ -284,16 +284,17 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        max-width: 500px;
+        max-width: 575px;
         margin: 0 auto;
         height: 4rem;
-        width: 80%;
+        width: 100%;
         padding: 0px 10px;
     }
 
     .value {
-        font-size: 26px;
-        width: 50px;
+        font-size: 16px;
+        color: #181818;
+        width: 1px;
         text-align: center;
     }
 
