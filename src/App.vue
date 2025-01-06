@@ -10,34 +10,46 @@
     const searchQuery = ref<string>("");
 
     onMounted(() => {
-        // Titlebar functionality //
-        const appWindow = getCurrentWindow();
+    // Titlebar functionality
+    const appWindow = getCurrentWindow();
 
-        // Event listeners for minimize button //
-        document.getElementById("titlebar-minimize")?.addEventListener("click", () => appWindow.minimize());
+    document.getElementById("titlebar-minimize")?.addEventListener("click", () => appWindow.minimize());
+    document.getElementById("titlebar-maximize")?.addEventListener("click", () => appWindow.toggleMaximize());
+    document.getElementById("titlebar-close")?.addEventListener("click", () => appWindow.close());
 
-        // Event listeners for maximize button //
-        document.getElementById("titlebar-maximize")?.addEventListener("click", () => appWindow.toggleMaximize());
+    // Fetch the fonts.json file
+    fetch("/fonts.json")
+        .then(response => response.json())
+        .then(data => {
+            fonts.value = data.fonts;
+        })
+        .catch(error => {
+            console.error('Error reading fonts.json:', error);
+        });
 
-        // Event listeners for close button //
-        document.getElementById("titlebar-close")?.addEventListener("click", () => appWindow.close());
+    // Slider functionality
+    const sliderEl = document.querySelector("#range") as HTMLInputElement | null;
+    const sliderValue = document.querySelector(".value");
 
+    if (sliderEl && sliderValue) {
+        sliderEl.addEventListener("input", (event) => {
+            const tempSliderValue = (event.target as HTMLInputElement).value;
 
-        // Fetch the fonts.json file
-        fetch("/fonts.json")
-            .then(response => response.json())
-            .then(data => {
-                fonts.value = data.fonts;
-            })
-            .catch(error => {
-                console.error('Error reading fonts.json:', error);
-            });
-    });
+            sliderValue.textContent = tempSliderValue;
+
+            const progress = (Number(tempSliderValue) / Number(sliderEl.max)) * 100;
+
+            sliderEl.style.background = `linear-gradient(to right, #181818 ${progress}%, #d8d8d8 ${progress}%)`;
+        });
+    }
+});
+
 
     // Function to clear the search box
     const clearSearch = () => {
         searchQuery.value = "";
     };
+
 </script>
 
 <template>
@@ -108,7 +120,9 @@
         </div>
 
         <!-- Font size control -->
-        <div class="size-control">
+        <div class="range">
+            <input type="range" min="0" max="100" value="0" id="range" />
+                <div class="value">0</div>
         </div>
     </div>
 
@@ -220,6 +234,80 @@
         font-weight: 700;
         color: #181818;
     }
+
+
+
+
+
+    input[type="range"] {
+        /* removing default appearance */
+        -webkit-appearance: none;
+        appearance: none;
+        /* creating a custom design */
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        height: 2px;
+        background: #d8d8d8;
+    }
+
+    /* Thumb: webkit */
+    input[type="range"]::-webkit-slider-thumb {
+        /* removing default appearance */
+        -webkit-appearance: none;
+        appearance: none;
+        /* creating a custom design */
+        height: 10px;
+        width: 10px;
+        background-color: #181818;
+        border: none;
+    }
+
+    /* Thumb: Firefox */
+    input[type="range"]::-moz-range-thumb {
+        height: 10px;
+        width: 10px;
+        background-color: #181818;
+        border: none;
+    }
+
+    /*=============
+    Aesthetics 
+    =========================*/
+
+    body {
+        font-family: system-ui;
+        color: #181818;
+    }
+
+    .range {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        max-width: 500px;
+        margin: 0 auto;
+        height: 4rem;
+        width: 80%;
+        padding: 0px 10px;
+    }
+
+    .value {
+        font-size: 26px;
+        width: 50px;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     /* Container for the search box and icons */
     .search-box-container {
@@ -353,7 +441,7 @@
 
     @media (prefers-color-scheme: dark) {
         :root {
-            color: #f8f8f8;
+            color: #181818;
             background-color: #181818;
         }
     }
