@@ -75,10 +75,43 @@
 
     <!-- Utility bar -->
     <div class="utility-bar">
+        <!-- Font case control -->
         <div class="case-control">
             Aa
         </div>
-        <!-- You can add any content here for the utility bar -->
+        
+        <!-- Font justification style control -->
+        <div class="justify-control"> 
+            <!-- Justify left icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M0 0H20V2.85714H0V0Z" fill="#181818"/>
+                <path d="M0 5.71429H11.4286V8.57143H0V5.71429Z" fill="#181818"/>
+                <path d="M0 11.4286H20V14.2857H0V11.4286Z" fill="#181818"/>
+                <path d="M0 17.1429H11.4286V20H0V17.1429Z" fill="#181818"/>
+                </svg>
+
+            <!-- Justify center icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M0 0H20V2.85714H0V0Z" fill="#181818"/>
+                <path d="M4.28571 5.71429H15.7143V8.57143H4.28571V5.71429Z" fill="#181818"/>
+                <path d="M0 11.4286H20V14.2857H0V11.4286Z" fill="#181818"/>
+                <path d="M4.28571 17.1429H15.7143V20H4.28571V17.1429Z" fill="#181818"/>
+            </svg>
+
+            <!-- Justify right icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M20 0H0V2.85714H20V0Z" fill="#181818"/>
+                <path d="M20 5.71429H8.57143V8.57143H20V5.71429Z" fill="#181818"/>
+                <path d="M20 11.4286H0V14.2857H20V11.4286Z" fill="#181818"/>
+                <path d="M20 17.1429H8.57143V20H20V17.1429Z" fill="#181818"/>
+            </svg>
+        </div>
+
+        <!-- Font size control -->
+        <div class="size-control">
+            
+
+        </div>
     </div>
 
     <!-- Search box container with SVG icons -->
