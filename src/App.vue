@@ -75,6 +75,9 @@
 
     <!-- Utility bar -->
     <div class="utility-bar">
+        <div class="case-control">
+            Aa
+        </div>
         <!-- You can add any content here for the utility bar -->
     </div>
 
@@ -174,7 +177,17 @@
         top: 44px;
         left: 150px;
         right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 1;
+    }
+    
+    .case-control {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 35px;
+        font-weight: 700;
+        color: #181818;
     }
 
     /* Container for the search box and icons */
