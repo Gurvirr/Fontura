@@ -73,6 +73,11 @@
         </div>
     </div>
 
+    <!-- Utility bar -->
+    <div class="utility-bar">
+        <!-- You can add any content here for the utility bar -->
+    </div>
+
     <!-- Search box container with SVG icons -->
     <div class="search-box-container">
         <!-- Search box -->
@@ -158,6 +163,18 @@
 
     .titlebar-button:hover .icon {
         transform: scale(1.5);
+    }
+
+    /* Utility bar styling */
+    .utility-bar {
+        height: 70px;
+        background-color: #f1f1f1;
+        border-top-left-radius: 50px;
+        position: absolute;
+        top: 44px;
+        left: 150px;
+        right: 0;
+        z-index: 1;
     }
 
     /* Container for the search box and icons */
@@ -252,16 +269,15 @@
     /* Main content rectangle container */
     .main-content {
         position: absolute;
-        top: 44px;
-        left: 44px;
+        top: 114px;
+        left: 150px;
         right: 0;
         color: #181818;
         background-color: #f8f8f8;
         padding: 20px;
         z-index: -1;
-        height: calc(100vh - 44px);
+        height: calc(100vh - 114px);
         overflow-y: auto;
-        border-top-left-radius: 50px;
         box-sizing: border-box;
     }
 
