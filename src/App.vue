@@ -164,8 +164,8 @@
     .search-box-container {
         position: relative;
         width: 45vw;
-        height: 24px;
-        margin: 10px auto;
+        height: 30px;
+        margin: -1px auto;
         display: flex;
         justify-content: center;
         transition: width 0.3s ease;
@@ -270,6 +270,7 @@
         margin-left: 6px;
         font-size: 40px;
         font-weight: 700;
+        -webkit-text-stroke: 1px #181818;
     }
 </style>
 
