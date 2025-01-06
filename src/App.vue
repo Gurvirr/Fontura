@@ -1,7 +1,6 @@
 <script setup lang="ts">
     import { onMounted } from "vue";
     import { ref } from "vue";
-    import { computed } from "vue";
     import { getCurrentWindow } from "@tauri-apps/api/window";
 
     // Font list state //
@@ -110,15 +109,6 @@
 
         <!-- Font size control -->
         <div class="size-control">
-            <!-- Background bar -->
-            <div class="size-control-background">
-                <!-- Slider bar -->
-                <div class="size-control-slider" :style="{ width: sliderWidth + 'px' }"></div>
-                <!-- End point rectangle -->
-                <div class="size-control-end-point" :style="{ left: endPointPosition + 'px' }"></div>
-            </div>
-            
-            <input type="range" min="0" max="100" v-model="sliderValue" @input="updateSlider" class="size-control-input"/>
         </div>
     </div>
 
@@ -229,72 +219,6 @@
         font-size: 35px;
         font-weight: 700;
         color: #181818;
-    }
-
-    .size-control {
-        display: flex;
-        align-items: center;
-        margin-left: 20px;
-    }
-
-    .size-control-background {
-        position: relative;
-        width: 575px;
-        height: 2px;
-        flex-shrink: 0;
-        background: #D8D8D8;
-        margin-right: 10px;
-    }
-
-    .size-control-slider {
-        position: absolute;
-        height: 2px;
-        background: #181818;
-        top: 0;
-        transition: width 0.1s ease;
-    }
-
-    .size-control-end-point {
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        background: #181818;
-        top: -3px;
-        border-radius: 50%;
-        transition: left 0.1s ease;
-    }
-
-    .size-control-input {
-        -webkit-appearance: none;
-        width: 100px;
-        height: 2px;
-        background: transparent;
-        cursor: pointer;
-    }
-
-    .size-control-input::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        width: 16px;
-        height: 16px;
-        background: #181818;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .size-control-input::-moz-range-thumb {
-        width: 16px;
-        height: 16px;
-        background: #181818;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .size-control-input::-ms-thumb {
-        width: 16px;
-        height: 16px;
-        background: #181818;
-        border-radius: 50%;
-        cursor: pointer;
     }
 
     /* Container for the search box and icons */
