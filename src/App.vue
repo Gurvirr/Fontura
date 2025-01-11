@@ -120,9 +120,9 @@
         </div>
 
         <!-- Font size control -->
-        <div class="range">
+        <div class="slider">
             <input type="range" min="0" max="100" value="0" id="range" />
-                <div class="value">0</div>
+            <div class="value">0</div>
         </div>
     </div>
 
@@ -223,7 +223,7 @@
         left: 150px;
         right: 0;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         z-index: 1;
     }
@@ -233,11 +233,13 @@
         font-size: 35px;
         font-weight: 700;
         color: #181818;
+        margin-left: 30px;
     }
 
-
-
-
+    .justify-control {
+        display: flex;
+        gap: 0.4rem; /* Adjusted gap to make spacing between icons smaller */
+    }
 
     input[type="range"] {
         /* removing default appearance */
@@ -253,10 +255,8 @@
 
     /* Thumb: webkit */
     input[type="range"]::-webkit-slider-thumb {
-        /* removing default appearance */
         -webkit-appearance: none;
         appearance: none;
-        /* creating a custom design */
         height: 10px;
         width: 10px;
         background-color: #181818;
@@ -271,44 +271,22 @@
         border: none;
     }
 
-    /*=============
-    Aesthetics 
-    =========================*/
-
-    body {
-        font-family: system-ui;
-        color: #181818;
-    }
-
-    .range {
+    .slider {
         display: flex;
         align-items: center;
-        gap: 1rem;
         max-width: 575px;
-        margin: 0 auto;
         height: 4rem;
         width: 100%;
-        padding: 0px 10px;
+        margin-right: 30px;
     }
 
     .value {
         font-size: 16px;
         color: #181818;
-        width: 1px;
+        width: auto;
         text-align: center;
+        margin-left: 10px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     /* Container for the search box and icons */
     .search-box-container {
