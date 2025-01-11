@@ -35,7 +35,8 @@
         sliderEl.addEventListener("input", (event) => {
             const tempSliderValue = (event.target as HTMLInputElement).value;
 
-            sliderValue.textContent = tempSliderValue;
+            const numericValue = Number(tempSliderValue);
+            sliderValue.textContent = `${numericValue}px`;
 
             const progress = (Number(tempSliderValue) / Number(sliderEl.max)) * 100;
 
@@ -43,7 +44,6 @@
         });
     }
 });
-
 
     // Function to clear the search box
     const clearSearch = () => {
