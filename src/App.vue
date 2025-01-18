@@ -225,7 +225,7 @@
         justify-content: space-between;
         align-items: center;
         z-index: 1;
-        gap: 20px;
+        gap: 30px;
     }
     
     .case-control {
