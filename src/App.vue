@@ -88,9 +88,7 @@
     <!-- Utility bar -->
     <div class="utility-bar">
         <!-- Font case control -->
-        <div class="case-control">
-            Aa
-        </div>
+        <div class="case-control">Aa</div>
         
         <!-- Font justification style control -->
         <div class="justify-control"> 
@@ -215,17 +213,19 @@
 
     /* Utility bar styling */
     .utility-bar {
+        display: flex;
         height: 70px;
         background-color: #f1f1f1;
         border-top-left-radius: 50px;
         position: absolute;
+        padding: 0 30px;
         top: 44px;
         left: 150px;
         right: 0;
-        display: flex;
         justify-content: space-between;
         align-items: center;
         z-index: 1;
+        gap: 20px;
     }
     
     .case-control {
@@ -233,12 +233,12 @@
         font-size: 35px;
         font-weight: 700;
         color: #181818;
-        margin-left: 30px;
     }
 
     .justify-control {
         display: flex;
-        gap: 0.4rem; /* Adjusted gap to make spacing between icons smaller */
+        gap: 0.4rem;
+        flex-shrink: 0;
     }
 
     input[type="range"] {
@@ -274,17 +274,16 @@
     .slider {
         display: flex;
         align-items: center;
-        max-width: 575px;
+        flex-grow: 1;
         height: 4rem;
         width: 100%;
-        margin-right: 30px;
     }
 
     .value {
         font-size: 16px;
         color: #181818;
-        width: auto;
         text-align: center;
+        width: 30px;
         margin-left: 10px;
     }
 
